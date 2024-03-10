@@ -1,0 +1,50 @@
+    // SulletSolmax //
+
+// Calculator
+// Variables (let -> immutable and var -> mutable)
+// Operators
+// Async Method
+// If Condition
+
+// Canister -> Akıllı Sözleşme
+
+actor calculator {
+var cell: Int = 0;
+
+// toplama
+public func addition(n: Int) : async Int {
+  cell += n;
+  cell
+  // (Debug.print(debug_show (cell));)
+};
+
+// çıkarma
+public func substraction(n: Int) : async Int {
+  cell -= n;
+  cell
+};
+
+// çarpma
+public func multiplication(n: Int) : async Int {
+  cell *= n;
+  cell
+};
+
+// bölme
+public func division(n: Int) : async ?Int {
+  if ( n == 0) {
+    null
+  }
+  else {
+    cell /= n;
+    ?cell
+  };
+};
+
+// temizleme
+public func clear() : async () {
+  cell := 0
+};
+
+
+};
